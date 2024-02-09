@@ -17,6 +17,8 @@ def my_action():
     field[maru_yoko][maru_tate] = 'o'
     print(field)
 
+my_action()
+
 def judge(field):
     for i in range(2):
         if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
