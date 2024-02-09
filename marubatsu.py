@@ -49,39 +49,39 @@ def judge(field):
         for i in range(2):
             if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
                 result = 1
-                return(field[i][0])
+                print(field[i][0])
                         
                     
             elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
                 result = 1
-                return(field[0][i])
+                print(field[0][i])
 
         if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
             result = 1
-            return(field[0][0])
+            print(field[0][0])
     
         elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
             result = 1
-            return(field[2][0])
+            print(field[2][0])
     
 
     elif count == 9:
         for i in range(2):
             if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
                 result = 1
-                return(field[i][0])
+                print(field[i][0])
 
             elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
                 result = 1
-                return(field[0][i])
+                print(field[0][i])
 
         if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
             result = 1
-            return(field[0][0])
+            print(field[0][0])
         
         elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
             result = 1
-            return(field[2][0])            
+            print(field[2][0])            
         
         if result == 0:
             result = 1
