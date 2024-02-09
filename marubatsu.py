@@ -9,7 +9,7 @@ field =  pd.DataFrame([['1', '2', '3'],
 running = True
 
 def my_action():
-    print('丸を書きたいところを"横(0~2), 縦(0~2)"で選択してね!')
+    print('丸を書きたいところを横(0~2), 縦(0~2)で選択してね!')
     maru_place = input().split(',')
     maru_yoko = int(maru_place[0])
     maru_tate = int(maru_place[1])
