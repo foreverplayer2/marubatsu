@@ -49,39 +49,39 @@ def judge(field):
         for i in range(2):
             if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
                 result = 1
-                print(field[i][0])
+                print(f'{field[i][0]}のプレイヤーの勝利です！')
                         
                     
             elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
                 result = 1
-                print(field[0][i])
+                print(f'{field[0][i]}のプレイヤーの勝利です！')
 
         if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
             result = 1
-            print(field[0][0])
+            print(f'{field[0][0]}のプレイヤーの勝利です!')
     
         elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
             result = 1
-            print(field[2][0])
+            print(f'{field[2][0]}のプレイヤーの勝利です!')
     
 
     elif count == 9:
         for i in range(2):
             if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
                 result = 1
-                print(field[i][0])
+                print(f'{field[i][0]}のプレイヤーの勝利です!')
 
             elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
                 result = 1
-                print(field[0][i])
+                print(f'{field[0][i]}のプレイヤーの勝利です!')
 
         if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
             result = 1
-            print(field[0][0])
+            print(f'{field[0][0]}のプレイヤーの勝利です!')
         
         elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
             result = 1
-            print(field[2][0])            
+            print(f'{field[2][0]}のプレイヤーの勝利です!')            
         
         if result == 0:
             result = 1
