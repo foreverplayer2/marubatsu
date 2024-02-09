@@ -8,6 +8,15 @@ field =  pd.DataFrame([['1', '2', '3'],
 
 running = True
 
+def my_action():
+    print('丸を書きたいところを"横(0~2), 縦(0~2)"で選択してね!')
+    maru_place = input().split(',')
+    maru_yoko = int(maru_place[0])
+    maru_tate = int(maru_place[1])
+    
+    field[maru_yoko][maru_tate] = 'o'
+    print(field)
+
 def judge(field):
     for i in range(2):
         if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
@@ -24,6 +33,8 @@ def judge(field):
         
         else:
             pass
+        
+
         
 
        
