@@ -56,9 +56,14 @@ def judge(field):
                 result = 1
                 return(field[0][i])
 
-            elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
-                result = 1
-                return(field[0][0])
+        if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
+            result = 1
+            return(field[0][0])
+    
+        elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
+            result = 1
+            return(field[2][0])
+    
 
     elif count == 9:
         for i in range(2):
@@ -70,13 +75,17 @@ def judge(field):
                 result = 1
                 return(field[0][i])
 
-            elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
-                result = 1
-                return(field[0][0])
-                    
-            else:
-                result = 1
-                print('引き分けです')
+        if field[0][0] == field[1][1] and field[1][1] == field[2][2]:
+            result = 1
+            return(field[0][0])
+        
+        elif field[2][0] == field[1][1] and field[1][1] == field[0][2]:
+            result = 1
+            return(field[2][0])            
+        
+        if result == 0:
+            result = 1
+            print('引き分けです')
         
 def taisen():
     running = True
