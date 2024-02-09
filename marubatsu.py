@@ -13,11 +13,9 @@ def my_action():
         maru_place = input().split(',')
         maru_yoko = int(maru_place[0])
         maru_tate = int(maru_place[1])
-    
         if field[maru_yoko][maru_tate] != 'o' or field[maru_yoko][maru_tate] != 'x':
             field[maru_yoko][maru_tate] = 'o'
-            my_turn = False
-         
+            my_turn = False   
     print(field)
     
 def enemy_action():
@@ -88,3 +86,5 @@ def taisen():
        
        if result == 1:
            running = False
+
+taisen()
