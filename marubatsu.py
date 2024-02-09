@@ -31,9 +31,10 @@ def enemy_action():
     print(field)
 
 result = 0
+count = 0
 def judge(field):
-    count = 0
-    
+    global count
+    global result
     for j in range(2):
         if field[0][j] == 'o' or field[0][j] == 'x':
             count += 1
@@ -44,38 +45,38 @@ def judge(field):
         if field[2][j] == 'o' or field[2][j] == 'x':
             count += 1
 
-            if count < 9:
-                for i in range(2):
-                    if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
-                        result = 1
-                        return(field[i][0])
+    if count < 9:
+        for i in range(2):
+            if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
+                result = 1
+                return(field[i][0])
                         
                     
-                    elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
-                        result = 1
-                        return(field[0][i])
+            elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
+                result = 1
+                return(field[0][i])
 
-                    elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
-                        result = 1
-                        return(field[0][0])
+            elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
+                result = 1
+                return(field[0][0])
 
-            elif count == 9:
-                for i in range(2):
-                    if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
-                        result = 1
-                        return(field[i][0])
+    elif count == 9:
+        for i in range(2):
+            if field[i][0] == field[i][1] and field[i][1] == field[i][2]:
+                result = 1
+                return(field[i][0])
 
-                    elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
-                        result = 1
-                        return(field[0][i])
+            elif field[0][i] == field[1][i] and field[1][i] == field[2][i]:
+                result = 1
+                return(field[0][i])
 
-                    elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
-                        result = 1
-                        return(field[0][0])
+            elif field[0][0] == field[1][1] and field[1][1] == field[2][2]:
+                result = 1
+                return(field[0][0])
                     
-                    else:
-                        result = 1
-                        print('引き分けです')
+            else:
+                result = 1
+                print('引き分けです')
         
 def taisen():
     running = True
