@@ -1,8 +1,4 @@
 import random
-import time
-import pandas as pd
-
-
 import pandas as pd
 
 field =  pd.DataFrame([['1', '2', '3'],
